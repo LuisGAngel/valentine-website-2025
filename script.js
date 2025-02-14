@@ -120,6 +120,11 @@ function showNextQuestion(questionNumber) {
     document.getElementById(`question${questionNumber}`).classList.remove('hidden');
 }
 
+function loveMeterOnClickButton(questionNumber) {
+    if (loveMeter.value < 5000) return;
+    showNextQuestion(questionNumber);
+}
+
 // Function to move the "No" button when clicked
 function moveButton(button) {
     const x = Math.random() * (window.innerWidth - button.offsetWidth);
